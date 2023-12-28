@@ -57,7 +57,9 @@
                 </a>
                 <a class="nav-icon position-relative text-decoration-none" href="{% url 'cart_sumary' %}">
                     <i class="fa fa-fw fa-cart-arrow-down text-light mr-1"></i>
-                    
+                    <span class="badge badge-danger position-absolute top-0 start-100 translate-middle" id="cart_quantity">
+                        {{cart|length}}
+                    </span>
                 </a>
                 <a class="nav-icon position-relative text-decoration-none" href="{% url "login" %}">
                     <i class="fa fa-fw fa-user text-light mr-3"></i> 
