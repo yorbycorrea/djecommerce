@@ -25,7 +25,16 @@ Table of contents
 16. Extra large devices (large desktops, 1200px and up)
 */
 
+.custom-img-size {
+  width: 100%; /* O define el ancho que prefieras */
+  height: auto;
+  /* Agrega cualquier otro estilo personalizado que desees */
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
 
 *{
     text-decoration: none;
