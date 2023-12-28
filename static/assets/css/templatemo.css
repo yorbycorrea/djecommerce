@@ -23,10 +23,107 @@ Table of contents
 14. Medium devices (tablets, 768px and up)
 15. Large devices (desktops, 992px and up)
 16. Extra large devices (large desktops, 1200px and up)
---------------------------------------------- */
+*/
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
+*{
+    text-decoration: none;
+}
 
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 20px;
+}
+
+.submenu{
+    position: relative;
+}
+
+table{
+    width: 100%;
+}
+th, td{
+    color: #feffff;
+}
+/* Estilos para la imagen del usuario */
+#img-usuario {
+  width: 20px;
+  height: auto;
+  margin-right: 20px;
+  cursor: pointer;
+  /* Cambiar el color de la imagen a blanco */
+  filter: invert(100%);
+}
+
+/* Estilos para los botones del usuario */
+.user-buttons a {
+  display: block;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  border: 1px solid #FFA500; /* Borde anaranjado */
+  border-radius: 4px;
+  background-color: #FFA500; /* Fondo anaranjado */
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.user-buttons a:hover {
+  background-color: #FF8000; /* Cambio de color al pasar el cursor */
+}
+
+/* Estilos para el contenedor de los botones */
+.user-submenu #botones-usuario {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: #4E4B5076;
+  padding: 20px;
+  min-width: 200px;
+}
+
+/* Mostrar el menú del usuario al pasar el cursor */
+.user-submenu:hover #botones-usuario {
+  display: block;
+  backdrop-filter: blur(10px);
+}
+
+/* Estilos para el contenedor del usuario */
+.submenu #usuario {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: #4E4B5076;
+  padding: 20px;
+  min-width: 200px;
+}
+
+/* Mostrar el menú del usuario al pasar el cursor */
+.submenu:hover #usuario {
+  display: block;
+  backdrop-filter: blur(10px);
+}
+
+/* Estilos para la tabla dentro del menú del usuario (si la tienes) */
+#info-usuario {
+  width: 100%;
+  color: #feffff;
+  /* Agrega estilos adicionales según sea necesario */
+}
+
+/* Mostrar los botones al pasar el cursor sobre el contenedor de los botones o sobre los botones mismos */
+.buttons-container:hover,
+.user-submenu:hover .buttons-container {
+  display: flex;
+}
 
 /* Typography */
 body, ul, li, p, a, label, input, div {
