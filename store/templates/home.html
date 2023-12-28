@@ -73,7 +73,22 @@
     </div>
     <!-- End Banner Hero -->
 
+<style>
+    .rounded-circle-container {
+        width: 300px; /* Ajusta el tamaño del círculo según tus necesidades */
+        height: 300px; /* Ajusta el tamaño del círculo según tus necesidades */
+        overflow: hidden;
+        border-radius: 50%;
+        margin: 0 auto; /* Centra el círculo en la columna */
+    }
 
+    .rounded-circle-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 50%;
+        display: block;
+    }
+</style>
     <!-- Start Categories of The Month -->
     <section class="container py-5">
         <div class="row text-center pt-3">
@@ -85,19 +100,19 @@
     
         <div class="row">
             {% for product in products %}
-                <div class="col-12 col-md-4 p-5 mt-3">
-                    <a href="#"><img src="{{ product.image.url }}" class="rounded-circle img-fluid border"></a>
-                    <h5 class="text-center mt-3 mb-3">{{ product.name }}</h5>
-                    <p class="text-center"><a class="btn btn-success" href="{% url "product" product.id %} ">Ver productos</a></p>
-                </div>
-    
-                {% if forloop.counter|divisibleby:3 %}
+                {% if forloop.counter <= 3 %}
+                    <div class="col-12 col-md-4 p-5 mt-3">
+                        <div class="rounded-circle-container">
+                            <a href="#"><img src="{{ product.image.url }}" class="img-fluid border"></a>
+                        </div>
+                        <h5 class="text-center mt-3 mb-3">{{ product.name }}</h5>
+                        <p class="text-center"><a class="btn btn-success" href="{% url "product" product.id %}">Ver productos</a></p>
                     </div>
-                    <div class="row">
                 {% endif %}
             {% endfor %}
         </div>
     </section>
+    
     
 </section>
 

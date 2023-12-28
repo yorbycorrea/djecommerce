@@ -59,9 +59,19 @@
                     <i class="fa fa-fw fa-cart-arrow-down text-light mr-1"></i>
                     
                 </a>
-                <a class="nav-icon position-relative text-decoration-none" href="{% url "login" %}">
-                    <i class="fa fa-fw fa-user text-light mr-3"></i> 
-                </a>
+                <div class="navbar align-self-center d-flex">
+                    <div class="submenu">
+                        <img src="{% static 'assets/img/img/user.svg' %}" id="img-usuario" alt="">
+                        <div id="usuario">
+                            <!-- Botones para el usuario -->
+                            <div class="user-buttons">
+                                <a href="{% url 'login' %}"  class="btn-3">Iniciar Sesión</a>
+                                <a href="{% url 'register'%}"  class="btn-3">Registrarse</a>
+                                <!-- Puedes agregar más botones según lo necesites -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

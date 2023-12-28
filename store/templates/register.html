@@ -1,22 +1,14 @@
 
-
-{% extends "base.html" %}
-{% load static%}
+{% load static %}
 {% block content %}
-<br><br/>
+    <h1>REGISTER</h1>
+    <form method='POST' action="{% url 'register'%}">
+        {% csrf_token %}
+        <div class="form-fields">
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-secondary">Register</button>
+        </div>
+    </form>
+    <link rel="stylesheet" href="{% static 'assets/css/estiloregistro.css' %}">
+{% endblock %}
 
-<h1> REGISTER</h1>
-<br><br/>
-<form method='POST' action="{% url 'register'%}">
-  {% csrf_token %}
-
-  {{form.as_p}}
-  <br><br>
-  <button type="submit" class="btn btn-secondary">Register</button>
-  
-</form>
-<br><br/>
-<br><br/>
-<br><br/>
-<br><br/>
-{% endblock %} 
